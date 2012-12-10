@@ -5,7 +5,7 @@ A couple of basic scripts to pull and store content from the CDC Syndication Hub
 
 ### Generate a Table of Syndication Topics
 
-The first script, syndication_topics.py, uses the Requests module (http://docs.python-requests.org/) to to request the XML list of all syndication topics via an HTTP GET request and uses BeautifulSoup (http://www.crummy.com/software/BeautifulSoup/) to parse out the individual topic information, specifically topic title and id.
+The first script, syndication_topics.py, uses the Requests module (http://docs.python-requests.org/) to request the XML list of all syndication topics via an HTTP GET request and uses BeautifulSoup (http://www.crummy.com/software/BeautifulSoup/) to parse out the individual topic information, specifically topic title and id.
 
 Both packages can be installed using pip:
 
@@ -31,4 +31,4 @@ Once you've set up some subscriptions in the CDC_Topics table, run this script t
 
 Just like the CDC_Topics table, the CDC_Syndication_Items table has a unique index on the itemid field (this the guid from the atom feed). If you run this script multiple times, the unqiue contraint will prevent duplicate items from being added to the database.
 
-And that's it. Our display code is site specific so it's not of much use.
+And that's it. You should now have a two tables filled with the data needed to collect, sort, aggregate and display content from the CDC Syndication Hub.
